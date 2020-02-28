@@ -2,7 +2,7 @@
 
 Easy customizable scraping starter kit.
 
-![Visualization](https://github.com/makotunes/easy-customizable-scraper/workspace/figure.png)
+![Visualization](https://github.com/makotunes/easy-customizable-scraper/blob/master/workspace/figure.png)
 
 ## Features
 
