@@ -98,6 +98,8 @@ def finalaizer(res):
     pages = list(map(lambda x: x["user_meta"], pages))
     df = pd.DataFrame(pages)
 
+    corr_df = df.loc[:, ["time", "n_howtomake", "n_components"]].corr()
+
     res["analyzed"] = {}
     res["analyzed"]["correlation"] = {}
     res["analyzed"]["correlation"]["time-n_howtomake"] = corr_df.loc["time", "n_howtomake"]
