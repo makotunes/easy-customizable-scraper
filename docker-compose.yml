@@ -1,0 +1,24 @@
+version: '2.3'
+
+services:
+  categorizer:
+    container_name: scanner
+    build: ./
+    image: scanner
+    environment:
+      ENTRY_URL: "http://recipe.hacarus.com/"
+      ALLOW_RULE: "/recipe/"
+      #DENY_RULE: "p=([1-9][0-9]|1[1-9][0-9])"
+      IMAGE_XPATH: '//*[@id="root"]/div/div/section/div/div/div[1]/figure/img'
+      DOCUMENT_XPATH: '//td/text()|//p/text()'
+      PAGE_LIMIT: 2000
+      EXCLUDE_REG: '\d(年|月|日|時|分|秒|ｇ|\u4eba|\u672c|cm|ml|g|\u5206\u679a\u5ea6)|hacarusinc|allrightsreserved'
+
+      LANG: ja_JP.UTF-8
+
+    volumes:
+      - ./:/usr/src/app
+    entrypoint: "/usr/src/app/entrypoint.sh"
+    #entrypoint: /bin/bash
+    #stdin_open: true
+    tty: true

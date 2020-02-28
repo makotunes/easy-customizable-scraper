@@ -1,0 +1,13 @@
+pprint
+gensim
+numpy
+nltk
+langdetect
+mecab-python3
+scrapy
+pymongo
+mongoengine
+sklearn
+matplotlib
+simplejson
+

@@ -1,0 +1,7 @@
+passages/
+workspace/dictionary/
+workspace/mmcorpus/
+workspace/model/
+workspace/temp/
+mecab-ipadic-neologd/
+__pycache__/
