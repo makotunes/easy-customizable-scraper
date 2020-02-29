@@ -82,6 +82,14 @@ If no options are specified, it is optimized for curated media and can be fully 
 
 result/res.json
 
+## Project structure
+
+| File                 | Description                                            |
+|----------------------|--------------------------------------------------------|
+| src/scraper.py       | Main Scrapying logic                                   |
+| src/categorizer.py   | Main algorithm to tag and visualize passages.          |
+| src/tokenizer.py     | Main algorithm to do morphological analysis            |
+
 ## Customize
 
 #### custom/_formatter.py
