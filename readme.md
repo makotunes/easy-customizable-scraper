@@ -30,6 +30,8 @@ https://mockers.io/scanner
 
 ## Install
 
+Note that it takes 1-2 hours.
+
 ```Shell
 docker build -t scanner .
 ```
@@ -86,7 +88,7 @@ result/res.json
 
 | File                 | Description                                            |
 |----------------------|--------------------------------------------------------|
-| src/scraper.py       | Main Scrapying logic                                   |
+| src/scraper.py       | Main scrapying logic                                   |
 | src/categorizer.py   | Main algorithm to tag and visualize passages.          |
 | src/tokenizer.py     | Main algorithm to do morphological analysis            |
 
