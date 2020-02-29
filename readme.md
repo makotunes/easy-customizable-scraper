@@ -10,7 +10,7 @@ The following features help users start development.
 - Customizability
 - Text analysis function (tagging / visualization)
 
-![Visualization](https://github.com/makotunes/easy-customizable-scraper/blob/master/workspace/figure.png)
+![Visualization](https://github.com/makotunes/easy-customizable-scraper/blob/ee040d871fec83afe7b7f25747ce61c1066c16c7/workspace/figure.png)
 
 ## Features
 
@@ -144,4 +144,4 @@ result/tagged.csv
 
 ### 2D map visualization
 
-![Visualization](https://github.com/makotunes/easy-customizable-scraper/blob/master/workspace/figure.png)
+![Visualization](https://github.com/makotunes/easy-customizable-scraper/blob/ee040d871fec83afe7b7f25747ce61c1066c16c7/workspace/figure.png)
