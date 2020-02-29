@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def finalizer(res):
-
     pages = res["scatter"]
     pages = list(map(lambda x: x["user_meta"], pages))
     df = pd.DataFrame(pages)
@@ -49,5 +48,15 @@ def finalizer(res):
         #del res["scatter"][l]["y"]
 
     res['pages'] = res.pop('scatter')
-    
+
+    df = pd.DataFrame(res['pages'])
+    df.to_csv('./result/res.csv')
+
+    tagged_df = df.loc[:, ["title", "topic"]]
+    tagged_df["tag1"] = df["topic"].apply(lambda x: x[0])
+    tagged_df["tag2"] = df["topic"].apply(lambda x: x[1])
+    tagged_df["tag3"] = df["topic"].apply(lambda x: x[2])
+    tagged_df = tagged_df.drop("topic",axis=1)
+    tagged_df.to_csv('./result/tagged.csv',index=False)
+
     return res

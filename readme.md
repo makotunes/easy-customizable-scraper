@@ -123,3 +123,25 @@ def finalizer(res):
 http://recipe.hacarus.com/
 
 > If you can not access it, please open it with secret browser.
+
+## Sample Result
+
+### Automatic tagging
+
+result/tagged.csv
+
+|title                           |tag1  |tag2     |tag3    |
+|--------------------------------|------|---------|--------|
+|なすとトマトの中華和え(１５分)                |なす    |トマト      |大葉      |
+|ぶりの照り焼き(45分)                    |両面    |照り焼き     |水気      |
+|おでん風煮(2時間)                      |大根    |こんにゃく    |竹輪      |
+|大根とツナのサラダ(15分)                  |ツナ    |大根       |わかめ     |
+|鶏の照り焼き丼(20分)                    |片栗粉   |にんにく     |れんこん    |
+|筑前煮(６０分)                        |れんこん  |ごぼう      |こんにゃく   |
+|白菜とわかめの酢の物(15分)                 |白菜    |わかめ      |しめじ     |
+|鮭のホイル焼き(25分)                    |玉ねぎ   |しめじ      |ピーマン    |
+
+
+### 2D map visualization
+
+![Visualization](https://github.com/makotunes/easy-customizable-scraper/blob/master/workspace/figure.png)

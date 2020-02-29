@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker run --rm -it -v "$PWD":/usr/src/app \
---name scanner --force scanner  \
+--name scanner \
 -e 'ENTRY_URL=http://recipe.hacarus.com/' \
 -e 'ALLOW_RULE=/recipe/' \
 -e 'IMAGE_XPATH=//*[@id="root"]/div/div/section/div/div/div[1]/figure/img' \
