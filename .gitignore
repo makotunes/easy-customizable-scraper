@@ -3,5 +3,5 @@ workspace/dictionary/
 workspace/mmcorpus/
 workspace/model/
 workspace/temp/
-mecab-ipadic-neologd/
 __pycache__/
+.DS_Store

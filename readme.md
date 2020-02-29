@@ -2,15 +2,23 @@
 
 Easy customizable scraping starter kit.
 
+General-purpose Web scraping tool with text analysis function.
+
+The following features help users start development.
+
+- Easy setup
+- Customizability
+- Text analysis function (tagging / visualization)
+
 ![Visualization](https://github.com/makotunes/easy-customizable-scraper/blob/master/workspace/figure.png)
 
 ## Features
 
-- Web Scrapying
-- Auto Language Detection
-- Morphological Analysis
-- Labling by main topic for each page
-- Visualization with 2D map for each page
+- Web scraping
+- Automatic language detection
+- Morphological analysis
+- Feature tagging algorithm (original)
+- 2D map visualization technology (original)
 
 
 ## Dependency
@@ -53,15 +61,18 @@ or
 
 Set Environment Variable of Docker Container.
 
+If you have at least ENTRY_URL, it will automatically scan the page and pull out the text.
+If no options are specified, it is optimized for curated media and can be fully automated, such as extracting the text of articles.
+
 | Environment Variable | Description                                                                                  |
 |----------------------|----------------------------------------------------------------------------------------------|
-| ENTRY_URL            | (Required) Initial url to start to scan. sub paths of specified one are scanned recursively. |
+| ENTRY_URL            | (Required) Site top URL to start scanning. All the pages are automatically scanned.          |
 | ALLOW_RULE           | Allow filter rule of target urls.                                                            |
-| DENY_RULE            | Deny filter rule of target urls.                                                             |
-| IMAGE_XPATH          | Xpath to get a image path.                                                                   |
-| DOCUMENT_XPATH       | Xpath for root node for target range.                                                        |
+| DENY_RULE            | Deny filter rule of target precedence overurls.                                              |
+| IMAGE_XPATH          | Specify the image you want to get on the page with XPATH.                                    |
+| DOCUMENT_XPATH       | XPATH of the top node in the page where text is to be extracted.                             |
 | PAGE_LIMIT           | Scaned limittation of number of pages. -1 means unlimited number.                            |
-| EXCLUDE_REG          | Excluded words with regular expression for morphological analysis.                           |
+| EXCLUDE_REG          | Regular expression of word rule not extracted by morphological analysis.                     |
 
 
 ## Result
@@ -93,7 +104,7 @@ Edit post-process to generate your expected output like below.
 ```Python
 import pandas as pd
 
-def finalaizer(res):
+def finalizer(res):
     pages = res["scatter"]
     pages = list(map(lambda x: x["user_meta"], pages))
     df = pd.DataFrame(pages)
